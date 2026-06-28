@@ -2,22 +2,22 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-  <title>PEA Procurement ระบบจัดทำเอกสารจัดซื้อจัดจ้าง กฟภ. (กรณีวงเงินต่ำกว่า 1 แสนบาท)</title>
+  <title>ระบบ e-Form จัดซื้อจัดจ้าง กฟภ.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PEA Procurement ระบบจัดทำเอกสารจัดซื้อจัดจ้าง กฟภ. (กรณีวงเงินต่ำกว่า 1 แสนบาท)</title>
+<title>ระบบ e-Form จัดซื้อจัดจ้าง กฟภ.</title>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   /* TH SarabunIT๙ — โหลดจาก CDN สำรอง */
   @font-face {
-    font-family: 'THSarabun';
-    src: local('THSarabunIT๙'), local('THSarabun');
+    font-family: 'TH SarabunIT๙';
+    src: local('TH SarabunIT๙'), local('TH Sarabun New'), local('THSarabunNew');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
-    font-family: 'THSarabun';
-    src: local('THSarabunIT๙ Bold'), local('THSarabun Bold');
+    font-family: 'TH SarabunIT๙';
+    src: local('TH SarabunIT๙ Bold'), local('TH Sarabun New Bold'), local('THSarabunNewBold');
     font-weight: bold;
     font-style: normal;
   }
@@ -51,19 +51,18 @@
   --radius-md:10px;
   --radius-lg:16px;
 }
-body{font-family:'THSarabun';background:var(--pea-bg);color:var(--pea-text);font-size:18px;line-height:1.65}
+body{font-family:'TH SarabunPSK','TH SarabunITນ','TH Sarabun New','Sarabun',sans-serif;background:var(--pea-bg);color:var(--pea-text);font-size:18px;line-height:1.65}
 /* NAV */
-.nav{font-family:'THSarabun';background:var(--pea-purple);color:#fff;padding:0 24px;display:flex;align-items:center;height:76px;position:sticky;top:0;z-index:100;box-shadow:var(--shadow-md)}
-.nav-logo{display:flex;align-items:center;gap: 20px;font: size 20px;font-weight:600}
-.nav-logo img{height:40px;width:40px;object-fit:contain;filter:brightness(0) invert(1)}
-.nav-title{font: size 20px;
-  opacity:.85;flex:1;margin-left:8px}
+.nav{font-family:'TH SarabunPSK','TH SarabunITນ','TH Sarabun New','Sarabun',sans-serif;background:var(--pea-purple);color:#fff;padding:0 24px;display:flex;align-items:center;height:76px;position:sticky;top:0;z-index:100;box-shadow:var(--shadow-md)}
+.nav-logo{display:flex;align-items:center;gap:14px;font-size:18px;font-weight:600}
+.nav-logo img{height:36px;width:36px;object-fit:contain;filter:brightness(0) invert(1)}
+.nav-title{font-size:14px;opacity:.85;flex:1;margin-left:8px}
 .nav-actions{display:flex;gap:8px}
 /* SIDEBAR */
 .layout{display:flex;min-height:calc(100vh - 76px)}
 .sidebar{width:270px;background:var(--pea-surface);border-right:1px solid var(--pea-border-light);padding:20px 0 0;flex-shrink:0;position:sticky;top:76px;height:calc(100vh - 76px);overflow-y:auto;display:flex;flex-direction:column}
 .sidebar-section{padding:0 16px;margin-bottom:6px}
-.sidebar-label{font: size 16px;font-weight:600;color:var(--pea-text-muted);text-transform:uppercase;letter-spacing:.7px;padding:8px 8px 4px}
+.sidebar-label{font-size:13px;font-weight:600;color:var(--pea-text-muted);text-transform:uppercase;letter-spacing:.7px;padding:8px 8px 4px}
 .sidebar-btn{display:flex;align-items:center;gap:10px;width:100%;padding:11px 14px;border:none;background:none;cursor:pointer;border-radius:var(--radius-sm);font-family:'TH SarabunPSK','TH SarabunITນ','TH Sarabun New','Sarabun',sans-serif;font-size:16px;color:var(--pea-text);transition:.15s;text-align:left}
 .sidebar-btn:hover{background:var(--pea-border-light);color:var(--pea-purple)}
 .sidebar-btn.active{background:linear-gradient(135deg,var(--pea-purple),var(--pea-purple-light));color:#fff}
@@ -90,31 +89,31 @@ h2{font-size:22px;font-weight:600;color:var(--pea-purple)}
 .btn-success:hover{background:#145E38}
 .btn-warning{background:var(--pea-gold);color:#fff}
 .btn-warning:hover{background:#A07820}
-.btn-sm{padding:7px 16px;font-size:18px}
+.btn-sm{padding:7px 16px;font-size:15px}
 .btn-danger{background:#C0392B;color:#fff}
 .btn-danger:hover{background:#9B2B1F}
 /* FORMS */
 .form-group{margin-bottom:16px}
-.form-label{display:block;font-size:20px;font-weight:500;color:var(--pea-text);margin-bottom:6px}
+.form-label{display:block;font-size:16px;font-weight:500;color:var(--pea-text);margin-bottom:6px}
 .form-label .req{color:#C0392B}
-.form-control{width:100%;padding:10px 14px;border:1px solid var(--pea-border);border-radius:var(--radius-sm);font-family:'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif;font-size:20px;color:var(--pea-text);background:var(--pea-surface);transition:.15s}
+.form-control{width:100%;padding:10px 14px;border:1px solid var(--pea-border);border-radius:var(--radius-sm);font-family:'TH SarabunPSK','TH SarabunITນ','TH Sarabun New','Sarabun',sans-serif;font-size:16px;color:var(--pea-text);background:var(--pea-surface);transition:.15s}
 .form-control:focus{outline:none;border-color:var(--pea-purple);box-shadow:0 0 0 3px rgba(107,44,143,.1)}
 .form-control::placeholder{color:#B0A0C0}
 select.form-control{cursor:pointer}
 textarea.form-control{resize:vertical;min-height:80px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
-.form-hint{font-size:20px;color:var(--pea-text-muted);margin-top:4px}
+.form-hint{font-size:14px;color:var(--pea-text-muted);margin-top:4px}
 /* TABLES */
 .table-wrap{overflow-x:auto}
-table.data-table{width:100%;border-collapse:collapse;font-size:20px}
+table.data-table{width:100%;border-collapse:collapse;font-size:15px}
 table.data-table th{background:var(--pea-purple);color:#fff;padding:12px 14px;text-align:left;font-weight:500;white-space:nowrap}
 table.data-table td{padding:11px 14px;border-bottom:1px solid var(--pea-border-light);vertical-align:middle}
 table.data-table tr:hover td{background:#FAF8FD}
 table.data-table .num{text-align:right;font-variant-numeric:tabular-nums}
 /* BADGES */
 
-.badge{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:20px;font-size:20px;font-weight:500}
+.badge{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:20px;font-size:14px;font-weight:500}
 .badge-draft{background:#F0EBF7;color:var(--pea-purple)}
 .badge-pending{background:var(--pea-warning-bg);color:var(--pea-warning)}
 .badge-approved{background:var(--pea-success-bg);color:var(--pea-success)}
@@ -153,9 +152,9 @@ table.data-table .num{text-align:right;font-variant-numeric:tabular-nums}
 .summary-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;font-size:14px;border-bottom:1px solid rgba(26,92,143,.1)}
 .summary-row:last-child{border-bottom:none;font-weight:700;font-size:15px;margin-top:4px;padding-top:8px}
 /* PREVIEW MODAL */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:200;align-items:flex-start;justify-content:center;overflow-y:auto;padding:0}
+.modal-overlay{display:none;flex-direction:column;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:200;align-items:flex-start;justify-content:center;overflow-y:auto;padding:0}
 .modal-overlay.open{display:flex}
-.modal{background:#d0d0d0;width:100%;max-width:100%;min-height:100vh;display:flex;flex-direction:column;margin:0}
+.modal{background:#d0d0d0;width:100%;max-width:100%;height:100vh;display:flex;flex-direction:column;margin:0}
 /* ── Title bar ── */
 .modal-header{display:flex;align-items:center;justify-content:space-between;padding:10px 18px;background:var(--pea-purple);color:#fff;position:sticky;top:0;z-index:20;flex-shrink:0}
 .modal-header-title{font-size:14px;font-weight:600;color:#fff;display:flex;align-items:center;gap:8px}
@@ -181,7 +180,7 @@ table.data-table .num{text-align:right;font-variant-numeric:tabular-nums}
 .ribbon-btn .rb-label{font-size:10px;color:#444;white-space:nowrap}
 .ribbon-btn.active{background:#dce6f5;color:var(--pea-purple)}
 /* ── Body ── */
-.modal-body{overflow-y:auto;padding:24px 0;background:#d0d0d0;flex:1}
+.modal-body{overflow:hidden;padding:0;background:#d0d0d0;flex:1;display:flex;flex-direction:column}
 /* ── Footer ── */
 .modal-footer{padding:8px 18px;border-top:1px solid #c8c8c8;display:flex;gap:8px;justify-content:flex-end;background:#f3f3f3;flex-shrink:0}
 .btn-close{background:none;border:none;cursor:pointer;font-size:18px;color:rgba(255,255,255,.8);line-height:1;padding:2px 6px;border-radius:3px}
@@ -360,10 +359,10 @@ input[type=number]{text-align:right}
 <nav class="nav" style="justify-content:space-between">
   <!-- โลโก้ + ชื่อ (ซ้าย) -->
   <div class="nav-logo">
-    <img id="navLogo" src="" alt="กฟภ." style="height:100px;width:100px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 1px 3px rgba(0,0,0,.25))">
+    <img id="navLogo" src="" alt="กฟภ." style="height:60px;width:60px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 1px 3px rgba(0,0,0,.25))">
     <div>
-      <div style="font-size:20px;font-weight:700;letter-spacing:.3px;line-height:1.2">ระบบจัดทำเอกสารจัดซื้อจัดจ้าง กฟภ. (กรณีวงเงินต่ำกว่า 1 แสนบาท)</div>
-      <div style="font-size:16px;opacity:.8;margin-top:2px">PEA Procurement</div>
+      <div style="font-size:20px;font-weight:700;letter-spacing:.3px;line-height:1.2">ระบบ e-Form จัดซื้อจัดจ้าง</div>
+      <div style="font-size:14px;opacity:.8;margin-top:2px">การไฟฟ้าส่วนภูมิภาค · วงเงินต่ำกว่า ๑๐๐,๐๐๐ บาท</div>
     </div>
   </div>
   <!-- ปุ่ม (ขวา) -->
@@ -402,13 +401,13 @@ input[type=number]{text-align:right}
   <div class="sidebar-section" style="border-top:1px solid var(--pea-border-light);padding-top:12px;margin-top:8px">
     <div class="sidebar-label">เอกสาร</div>
     <button class="sidebar-btn" onclick="showPage('form1')">
-      <span class="icon">📄</span> 1. รายงานขอซื้อ/จ้าง
+      <span class="icon">📄</span> ๑. รายงานขอซื้อ/จ้าง
     </button>
     <button class="sidebar-btn" onclick="showPage('form2')">
-      <span class="icon">📄</span> 2. ขออนุมัติจัดซื้อ/จ้าง
+      <span class="icon">📄</span> ๒. ขออนุมัติจัดซื้อ/จ้าง
     </button>
     <button class="sidebar-btn" onclick="showPage('form3')">
-      <span class="icon">📄</span> 3. ตรวจรับงาน
+      <span class="icon">📄</span> ๓. ตรวจรับงาน
     </button>
   </div>
   <div class="sidebar-section" style="border-top:1px solid var(--pea-border-light);padding-top:12px;margin-top:8px">
@@ -442,8 +441,8 @@ input[type=number]{text-align:right}
 <div class="page active" id="page-dashboard">
   <div class="top-strip">
     <div>
-      <h1>ยินดีต้อนรับสู่ระบบ PEA Procurement</h1>
-      <p class="subtitle">จัดซื้อจัดจ้างโดยวิธีเฉพาะเจาะจง กรณีวงเงินไม่เกิน 100,000 บาท</p>
+      <h1>ยินดีต้อนรับสู่ระบบ e-Form</h1>
+      <p class="subtitle">จัดซื้อจัดจ้างโดยวิธีเฉพาะเจาะจง กรณีวงเงินไม่เกิน ๑๐๐,๐๐๐ บาท</p>
     </div>
     <button class="btn btn-warning" onclick="newJob()">+ สร้างงานจัดซื้อใหม่</button>
   </div>
@@ -459,21 +458,21 @@ input[type=number]{text-align:right}
     <div class="card">
       <div class="card-header"><span class="card-title">📌 ขั้นตอนการจัดซื้อ</span></div>
       <div class="flow-card" onclick="showPage('form1')">
-        <div class="flow-num">1</div>
+        <div class="flow-num">๑</div>
         <div class="flow-info">
           <div class="flow-name">รายงานขอซื้อ/ขอจ้าง</div>
           <div class="flow-desc">กรอกรายละเอียดพัสดุ คำนวณภาษี</div>
         </div>
       </div>
       <div class="flow-card" onclick="showPage('form2')">
-        <div class="flow-num">2</div>
+        <div class="flow-num">๒</div>
         <div class="flow-info">
           <div class="flow-name">ขออนุมัติจัดซื้อ/จัดจ้าง</div>
           <div class="flow-desc">รายงานผลการเจรจา ระบุผู้ขาย</div>
         </div>
       </div>
       <div class="flow-card" onclick="showPage('form3')">
-        <div class="flow-num">3</div>
+        <div class="flow-num">๓</div>
         <div class="flow-info">
           <div class="flow-name">คณะกรรมการตรวจรับงาน</div>
           <div class="flow-desc">ลงนามตรวจรับ อนุมัติสั่งจ่าย</div>
@@ -494,7 +493,9 @@ input[type=number]{text-align:right}
       <input class="form-control" style="max-width:300px" placeholder="🔍 ค้นหาชื่องาน..." id="searchInput" oninput="renderJobsList()">
       <select class="form-control" style="max-width:160px" id="filterStatus" onchange="renderJobsList()">
         <option value="">ทุกสถานะ</option>
-        <option value="draft">ร่างเอกสาร</option>
+        <option value="draft">ร่าง</option>
+        <option value="pending">รออนุมัติ</option>
+        <option value="approved">อนุมัติแล้ว</option>
         <option value="complete">เสร็จสิ้น</option>
       </select>
     </div>
@@ -512,7 +513,7 @@ input[type=number]{text-align:right}
 <!-- FORM 1 -->
 <div class="page" id="page-form1">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
-    <div><h1>1. รายงานขอซื้อ/ขอจ้าง</h1><p class="subtitle">กรอกข้อมูลตามแบบฟอร์มรายงานขอซื้อหรือขอจ้างโดยวิธีเฉพาะเจาะจง</p></div>
+    <div><h1>๑. รายงานขอซื้อ/ขอจ้าง</h1><p class="subtitle">กรอกข้อมูลตามแบบฟอร์มรายงานขอซื้อหรือขอจ้างโดยวิธีเฉพาะเจาะจง</p></div>
     <div style="display:flex;gap:8px">
       <button class="btn btn-secondary btn-sm" onclick="previewForm(1)">👁 ดูตัวอย่าง</button>
       <button class="btn btn-primary btn-sm" onclick="saveForm(1)">💾 บันทึก</button>
@@ -520,17 +521,17 @@ input[type=number]{text-align:right}
   </div>
   <div class="stepper" id="stepper1"></div>
   <div class="tabs" id="tabs1">
-    <button class="tab-btn active" onclick="switchTab('tabs1',0)">ส่วนที่ 1 หัวบันทึก</button>
-    <button class="tab-btn" onclick="switchTab('tabs1',1)">ส่วนที่ 2 รายการพัสดุ</button>
-    <button class="tab-btn" onclick="switchTab('tabs1',2)">ส่วนที่ 3 รายละเอียดอื่นๆ</button>
-    <button class="tab-btn" onclick="switchTab('tabs1',3)">ส่วนที่ 4 ผู้อนุมัติ</button>
+    <button class="tab-btn active" onclick="switchTab('tabs1',0)">ส่วนที่ ๑ หัวบันทึก</button>
+    <button class="tab-btn" onclick="switchTab('tabs1',1)">ส่วนที่ ๒ รายการพัสดุ</button>
+    <button class="tab-btn" onclick="switchTab('tabs1',2)">ส่วนที่ ๓ รายละเอียดอื่นๆ</button>
+    <button class="tab-btn" onclick="switchTab('tabs1',3)">ส่วนที่ ๔ ผู้รับรอง</button>
   </div>
   <!-- Tab 0 -->
   <div class="tab-pane active" id="t1-0">
     <div class="card">
       <div class="form-row">
         <div class="form-group"><label class="form-label">จาก <span class="req">*</span></label><input class="form-control" id="f1_from" placeholder="หน่วยงาน / ตำแหน่ง ผู้ทำบันทึก"></div>
-        <div class="form-group"><label class="form-label">ถึง <span class="req">*</span></label><input class="form-control" id="f1_to" placeholder="หน่วยงาน / ตำแหน่ง"></div>
+        <div class="form-group"><label class="form-label">ถึง <span class="req">*</span></label><input class="form-control" id="f1_to" placeholder="ผู้บังคับบัญชา / ผจก."></div>
       </div>
       <div class="form-row">
         <div class="form-group"><label class="form-label">เลขที่</label><input class="form-control" id="f1_docno" placeholder="กฟภ.x-xx/xxxx"></div>
@@ -550,11 +551,11 @@ input[type=number]{text-align:right}
         </div>
         <label class="form-label">เรื่อง <span class="req">*</span></label>
         <div style="display:flex;align-items:center;gap:0">
-          <span id="f1_type_label" style="background:var(--pea-purple);color:#fff;padding:9px 13px;border-radius:var(--radius-sm) 0 0 var(--radius-sm);font-size:16px;font-weight:600;white-space:nowrap;flex-shrink:0">รายงานขอซื้อ</span>
+          <span id="f1_type_label" style="background:var(--pea-purple);color:#fff;padding:9px 13px;border-radius:var(--radius-sm) 0 0 var(--radius-sm);font-size:14px;font-weight:600;white-space:nowrap;flex-shrink:0">รายงานขอซื้อ</span>
           <input class="form-control" id="f1_subject" placeholder="ระบุรายการสินค้า/งาน..." style="border-radius:0 var(--radius-sm) var(--radius-sm) 0;border-left:none">
         </div>
       </div>
-      <div class="form-group"><label class="form-label">เรียน <span class="req">*</span></label><input class="form-control" id="f1_attention" placeholder="ผู้บังคับบัญชาชั้นต้น"></div>
+      <div class="form-group"><label class="form-label">เรียน <span class="req">*</span></label><input class="form-control" id="f1_attention" placeholder="ผู้จัดการการไฟฟ้าส่วนภูมิภาค..."></div>
       <div class="form-group"><label class="form-label">ด้วย (หน่วยงาน)</label><input class="form-control" id="f1_dept" placeholder="แผนก/ฝ่าย..."></div>
       <div class="form-group"><label class="form-label">เหตุผลความจำเป็นที่ต้องจัดซื้อ/จัดจ้าง</label>
         <textarea class="form-control" id="f1_reason" placeholder="ระบุความจำเป็นในการจัดซื้อ/จัดจ้าง..." rows="3"></textarea></div>
@@ -581,7 +582,7 @@ input[type=number]{text-align:right}
         <label class="form-label" style="font-weight:600">การคิดภาษีมูลค่าเพิ่ม</label>
         <div style="display:flex;gap:0;border:1.5px solid var(--pea-purple);border-radius:var(--radius-sm);overflow:hidden;width:fit-content;margin-top:6px">
           <label id="lbl_f1vat_ex" style="display:flex;align-items:center;gap:6px;padding:8px 20px;cursor:pointer;background:var(--pea-purple);color:#fff;font-size:15px;font-weight:600;transition:.15s">
-            <input type="radio" name="f1_vat_type" value="ex" id="f1_vat_ex" onchange="onF1VatChange()" checked style="display:none">📤 ภาษีนอก (+7%)
+            <input type="radio" name="f1_vat_type" value="ex" id="f1_vat_ex" onchange="onF1VatChange()" checked style="display:none">📤 ภาษีนอก (+๗%)
           </label>
           <label id="lbl_f1vat_in" style="display:flex;align-items:center;gap:6px;padding:8px 20px;cursor:pointer;background:#fff;color:var(--pea-purple);font-size:15px;font-weight:600;transition:.15s;border-left:1.5px solid var(--pea-purple)">
             <input type="radio" name="f1_vat_type" value="in" id="f1_vat_in" onchange="onF1VatChange()" style="display:none">📥 ภาษีใน (รวมแล้ว)
@@ -614,7 +615,7 @@ input[type=number]{text-align:right}
           </label>
           <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;font-size:14px">
             <input type="radio" name="f1_market_source" value="5" id="ms5" onchange="onMarketSourceChange()" style="margin-top:3px;accent-color:var(--pea-purple)">
-            <span>ราคาที่เคยซื้อหรือจ้างครั้งหลังสุดภายในระยะเวลา 2 ปีงบประมาณ</span>
+            <span>ราคาที่เคยซื้อหรือจ้างครั้งหลังสุดภายในระยะเวลา ๒ ปีงบประมาณ</span>
           </label>
           <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;font-size:14px">
             <input type="radio" name="f1_market_source" value="6" id="ms6" onchange="onMarketSourceChange()" style="margin-top:3px;accent-color:var(--pea-purple)">
@@ -649,7 +650,7 @@ input[type=number]{text-align:right}
       </div>
       <div class="form-row">
         <div class="form-group"><label class="form-label">วงเงินงบประมาณ บาท</label><input class="form-control" id="f1_budget" type="number" placeholder="0.00" oninput="updateBudget1()"></div>
-        <div class="form-group"><label class="form-label">ภาษีมูลค่าเพิ่ม 7% บาท</label><input class="form-control" id="f1_vat_amt" type="number" placeholder="0.00" readonly></div>
+        <div class="form-group"><label class="form-label">ภาษีมูลค่าเพิ่ม ๗% บาท</label><input class="form-control" id="f1_vat_amt" type="number" placeholder="0.00" readonly></div>
       </div>
       <div class="form-row">
         <div class="form-group"><label class="form-label">รวมวงเงินทั้งสิ้น บาท</label><input class="form-control" id="f1_total_budget" type="number" placeholder="0.00" readonly style="font-weight:700"></div>
@@ -683,18 +684,18 @@ input[type=number]{text-align:right}
         <div class="form-group"><label class="form-label">ชื่อเจ้าหน้าที่ติดต่อตกลงราคา</label><input class="form-control" id="f1_officer" placeholder="ชื่อ-สกุล เจ้าหน้าที่"></div>
         <div class="form-group"><label class="form-label">ตำแหน่ง</label><input class="form-control" id="f1_officer_pos" placeholder="ตำแหน่ง"></div>
       </div>
-      <div class="card-header" style="margin-top:16px"><span class="card-title">คณะกรรมการตรวจรับพัสดุ,คณะกรรมการตรวจรับงานจ้าง</span></div>
+      <div class="card-header" style="margin-top:16px"><span class="card-title">${docWord('คณะกรรมการตรวจรับพัสดุ','คณะกรรมการตรวจรับงานจ้าง')}</span></div>
       <div id="f1_committee_rows">
         <div class="form-row" style="margin-bottom:10px">
-          <div class="form-group"><label class="form-label">กรรมการที่ 1 (ชื่อ-สกุล)</label><input class="form-control" id="f1_com1_name" placeholder="ชื่อ-สกุล"></div>
+          <div class="form-group"><label class="form-label">กรรมการที่ ๑ (ชื่อ-สกุล)</label><input class="form-control" id="f1_com1_name" placeholder="ชื่อ-สกุล"></div>
           <div class="form-group"><label class="form-label">ตำแหน่ง</label><input class="form-control" id="f1_com1_pos" placeholder="ตำแหน่ง"></div>
         </div>
         <div class="form-row" style="margin-bottom:10px">
-          <div class="form-group"><label class="form-label">กรรมการที่ 2 (ชื่อ-สกุล)</label><input class="form-control" id="f1_com2_name" placeholder="ชื่อ-สกุล"></div>
+          <div class="form-group"><label class="form-label">กรรมการที่ ๒ (ชื่อ-สกุล)</label><input class="form-control" id="f1_com2_name" placeholder="ชื่อ-สกุล"></div>
           <div class="form-group"><label class="form-label">ตำแหน่ง</label><input class="form-control" id="f1_com2_pos" placeholder="ตำแหน่ง"></div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label class="form-label">กรรมการที่ 3 (ชื่อ-สกุล)</label><input class="form-control" id="f1_com3_name" placeholder="ชื่อ-สกุล"></div>
+          <div class="form-group"><label class="form-label">กรรมการที่ ๓ (ชื่อ-สกุล)</label><input class="form-control" id="f1_com3_name" placeholder="ชื่อ-สกุล"></div>
           <div class="form-group"><label class="form-label">ตำแหน่ง</label><input class="form-control" id="f1_com3_pos" placeholder="ตำแหน่ง"></div>
         </div>
       </div>
@@ -706,7 +707,7 @@ input[type=number]{text-align:right}
           <div class="form-group"><label class="form-label">ตำแหน่งผู้มีอำนาจ</label>
             <input class="form-control" id="f1_auth_pos" placeholder="เช่น ผจก.กฟภ.ชุมแพ"></div>
           <div class="form-group"><label class="form-label">ตามคำสั่งเลขที่</label>
-            <input class="form-control" id="f1_auth_order" placeholder="เช่น พ(ม).........."></div>
+            <input class="form-control" id="f1_auth_order" placeholder="เช่น พ(ม)๓๗/๒๕๖๖"></div>
           <div class="form-group"><label class="form-label">ลงวันที่</label>
             <input class="form-control" type="date" id="f1_auth_date" onchange="updateDatePreview('f1_auth_date','f1_auth_date_th')">
             <div id="f1_auth_date_th" style="font-size:13px;color:var(--pea-purple);margin-top:3px"></div></div>
@@ -740,7 +741,7 @@ input[type=number]{text-align:right}
 <!-- FORM 2 -->
 <div class="page" id="page-form2">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
-    <div><h1>2. ขออนุมัติจัดซื้อ/จัดจ้าง</h1><p class="subtitle">รายงานผลการเจรจา ขออนุมัติ กรณีวงเงินไม่เกิน 100,000 บาท</p></div>
+    <div><h1>๒. ขออนุมัติจัดซื้อ/จัดจ้าง</h1><p class="subtitle">รายงานผลการเจรจา ขออนุมัติ กรณีวงเงินไม่เกิน ๑๐๐,๐๐๐ บาท</p></div>
     <div style="display:flex;gap:8px">
       <button class="btn btn-secondary btn-sm" onclick="previewForm(2)">👁 ดูตัวอย่าง</button>
       <button class="btn btn-primary btn-sm" onclick="saveForm(2)">💾 บันทึก</button>
@@ -790,7 +791,7 @@ input[type=number]{text-align:right}
       <div style="display:flex;gap:0;border:1px solid var(--pea-border);border-radius:var(--radius-sm);overflow:hidden;margin-top:6px">
         <label id="lbl_vat_ex" style="flex:1;text-align:center;padding:10px 8px;cursor:pointer;background:var(--pea-purple);color:#fff;font-size:14px;transition:.15s">
           <input type="radio" name="f2_vat_mode" value="ex" id="f2_vat_ex" onchange="onVatModeChange()" checked style="display:none">
-          📤 ภาษีนอก<div style="font-size:11px;opacity:.85">+7% จากราคา</div>
+          📤 ภาษีนอก<div style="font-size:11px;opacity:.85">+๗% จากราคา</div>
         </label>
         <label id="lbl_vat_in" style="flex:1;text-align:center;padding:10px 8px;cursor:pointer;background:#f5f5f5;color:#555;font-size:14px;transition:.15s;border-left:1px solid var(--pea-border)">
           <input type="radio" name="f2_vat_mode" value="in" id="f2_vat_in" onchange="onVatModeChange()" style="display:none">
@@ -802,13 +803,13 @@ input[type=number]{text-align:right}
         </label>
       </div>
       <div id="f2_vat_hint" style="margin-top:8px;padding:10px 14px;background:#FFF8E8;border-left:3px solid #C9922A;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:13px;line-height:1.5">
-        💡 <b>ภาษีนอก:</b> ราคาที่กรอก × 1.07 = ยอดรวม &nbsp;|&nbsp; ใช้เมื่อผู้ขายจดทะเบียน ภพ.20 และแจ้งราคาก่อนภาษี
+        💡 <b>ภาษีนอก:</b> ราคาที่กรอก × ๑.๐๗ = ยอดรวม &nbsp;|&nbsp; ใช้เมื่อผู้ขายจดทะเบียน ภพ.๒๐ และแจ้งราคาก่อนภาษี
       </div>
     </div>
     <div class="form-group"><label class="form-label">การจดทะเบียนภาษีมูลค่าเพิ่มของผู้ขาย</label>
       <div class="radio-group">
-        <label class="radio-option"><input type="radio" name="f2_vat_reg" value="yes" id="f2_vat_yes">จดทะเบียน ภพ.20</label>
-        <label class="radio-option"><input type="radio" name="f2_vat_reg" value="no" id="f2_vat_no">ไม่ได้จดทะเบียน ภพ.20</label>
+        <label class="radio-option"><input type="radio" name="f2_vat_reg" value="yes" id="f2_vat_yes"> ☑ จดทะเบียน ภพ.๒๐</label>
+        <label class="radio-option"><input type="radio" name="f2_vat_reg" value="no" id="f2_vat_no"> ☐ ไม่ได้จดทะเบียน ภพ.๒๐</label>
       </div>
     </div>
     <div class="form-row">
@@ -850,16 +851,16 @@ input[type=number]{text-align:right}
     </div>
     <div class="form-group"><label class="form-label">วันที่</label><input class="form-control" type="date" id="f3_date" onchange="updateDatePreview('f3_date','f3_date_th')"><div id="f3_date_th" style="font-size:13px;color:var(--pea-purple);margin-top:3px"></div></div>
     <div class="form-group">
-      <label class="form-label">เรื่อง <span style="font-size:11px;color:var(--pea-text-muted)">(ซิงก์จากแบบที่ 1 อัตโนมัติ)</span></label>
+      <label class="form-label">เรื่อง <span style="font-size:11px;color:var(--pea-text-muted)">(ซิงก์จากแบบที่ ๑ อัตโนมัติ)</span></label>
       <input class="form-control" id="f3_subject" placeholder="การตรวจรับงาน..." oninput="">
-      <div style="margin-top:4px"><button class="btn btn-secondary btn-sm" onclick="syncF3FromF1()">🔄 ซิงก์ข้อมูลจากแบบที่ 1</button></div>
+      <div style="margin-top:4px"><button class="btn btn-secondary btn-sm" onclick="syncF3FromF1()">🔄 ซิงก์ข้อมูลจากแบบที่ ๑</button></div>
     </div>
     <div class="form-group"><label class="form-label">เรียน</label><input class="form-control" id="f3_attention" placeholder="ผู้จัดการ..."></div>
     <div class="form-row">
       <div class="form-group"><label class="form-label">ตามอนุมัติ ผจก. ลงวันที่</label><input class="form-control" type="date" id="f3_approval_date"></div>
       <div class="form-group"><label class="form-label">ให้ (หน่วยงาน) จัดซื้อ/จ้าง</label><input class="form-control" id="f3_dept" placeholder="หน่วยงาน"></div>
     </div>
-    <div class="form-group"><label class="form-label">รายการที่จัดซื้อ/จ้าง<span style="font-size:11px;color:var(--pea-text-muted)">(ซิงก์จากเรื่อง)</span></label>
+    <div class="form-group"><label class="form-label">รายการที่จัด${docWord('ซื้อ','จ้าง')} <span style="font-size:11px;color:var(--pea-text-muted)">(ซิงก์จากเรื่อง)</span></label>
       <input class="form-control" id="f3_item_desc" placeholder="รายการสินค้า/งาน"></div>
     <div class="form-group">
       <label class="form-label" style="font-weight:600">ภาษีมูลค่าเพิ่ม</label>
@@ -873,7 +874,7 @@ input[type=number]{text-align:right}
       </div>
     </div>
     <div class="form-row">
-      <div class="form-group"><label class="form-label">จำนวนเงินรวม (บาท)<span style="font-size:11px;color:var(--pea-text-muted)">(แก้ไขได้)</span></label>
+      <div class="form-group"><label class="form-label">จำนวนเงินรวม (บาท) <span style="font-size:11px;color:var(--pea-text-muted)">(แก้ไขได้)</span></label>
         <input class="form-control" id="f3_amount" type="number" placeholder="0.00" oninput="updateAmount3()">
         <div style="margin-top:4px"><button class="btn btn-secondary btn-sm" onclick="syncF3AmountFromF2()">🔄 ซิงก์จากแบบที่ ๒</button></div>
       </div>
@@ -881,7 +882,7 @@ input[type=number]{text-align:right}
         <input class="form-control" id="f3_amount_text" placeholder="คำนวณอัตโนมัติ" readonly></div>
     </div>
     <div class="form-row" id="f3_vat_row">
-      <div class="form-group"><label class="form-label">ภาษีมูลค่าเพิ่ม 7% (บาท)</label>
+      <div class="form-group"><label class="form-label">ภาษีมูลค่าเพิ่ม ๗% (บาท)</label>
         <input class="form-control" id="f3_vat_amt" type="number" placeholder="0.00" readonly></div>
       <div class="form-group"><label class="form-label">ราคาก่อนภาษี (บาท)</label>
         <input class="form-control" id="f3_pre_vat" type="number" placeholder="0.00" readonly></div>
@@ -894,17 +895,17 @@ input[type=number]{text-align:right}
       <span class="card-title">คณะกรรมการตรวจรับ</span>
       <button class="btn btn-secondary btn-sm" onclick="syncF3FromF1()">🔄 ซิงก์จากแบบที่ ๑</button>
     </div>
-    <div class="alert alert-info" style="margin-bottom:12px;font-size:13px">ข้อมูลคณะกรรมการซิงก์จากแบบที่ 1 กดปุ่ม "ซิงก์" หรือแก้ไขเองได้</div>
+    <div class="alert alert-info" style="margin-bottom:12px;font-size:13px">ข้อมูลคณะกรรมการซิงก์จากแบบที่ ๑ กดปุ่ม "ซิงก์" หรือแก้ไขเองได้</div>
     <div class="form-row">
-      <div class="form-group"><label class="form-label">กรรมการที่ 1 (ชื่อ-สกุล)</label><input class="form-control" id="f3_chair" placeholder="ชื่อ-สกุล"></div>
+      <div class="form-group"><label class="form-label">กรรมการที่ ๑ (ชื่อ-สกุล)</label><input class="form-control" id="f3_chair" placeholder="ชื่อ-สกุล"></div>
       <div class="form-group"><label class="form-label">ตำแหน่ง</label><input class="form-control" id="f3_chair_pos" placeholder="ตำแหน่ง"></div>
     </div>
     <div class="form-row">
-      <div class="form-group"><label class="form-label">กรรมการที่ 2</label><input class="form-control" id="f3_com1" placeholder="ชื่อ-สกุล"></div>
+      <div class="form-group"><label class="form-label">กรรมการที่ ๒</label><input class="form-control" id="f3_com1" placeholder="ชื่อ-สกุล"></div>
       <div class="form-group"><label class="form-label">ตำแหน่ง</label><input class="form-control" id="f3_com1_pos" placeholder="ตำแหน่ง"></div>
     </div>
     <div class="form-row">
-      <div class="form-group"><label class="form-label">กรรมการที่ 3</label><input class="form-control" id="f3_com2" placeholder="ชื่อ-สกุล"></div>
+      <div class="form-group"><label class="form-label">กรรมการที่ ๓</label><input class="form-control" id="f3_com2" placeholder="ชื่อ-สกุล"></div>
       <div class="form-group"><label class="form-label">ตำแหน่ง</label><input class="form-control" id="f3_com2_pos" placeholder="ตำแหน่ง"></div>
     </div>
     <div class="form-row">
@@ -912,7 +913,7 @@ input[type=number]{text-align:right}
       <div class="form-group"><label class="form-label">ตำแหน่งผู้อนุมัติ</label><input class="form-control" id="f3_approver_pos" placeholder="ตำแหน่ง"></div>
     </div>
     <div class="form-row">
-      <div class="form-group"><label class="form-label">แผนก</label><input class="form-control" id="f3_dept_sign" placeholder="แผนก..."></div>
+      <div class="form-group"><label class="form-label">แผนก</label><input class="form-control" id="f3_dept_sign" placeholder="แผนก"></div>
       <div class="form-group"><label class="form-label">เบอร์โทร</label><input class="form-control" id="f3_phone" placeholder="โทรศัพท์"></div>
     </div>
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
@@ -1009,7 +1010,10 @@ input[type=number]{text-align:right}
           <div class="ribbon-ctrl">
             <label>ฟอนต์</label>
             <select id="mgFontFace" onchange="updatePageMargins()" style="width:130px">
-              <option value="'THSarabunIT๙','THSarabun'" selected>THSarabunIT๙</option>
+              <option value="'TH SarabunIT๙','TH Sarabun New','Sarabun',sans-serif" selected>TH SarabunIT๙</option>
+              <option value="'TH Sarabun New','Sarabun',sans-serif">TH Sarabun New</option>
+              <option value="'Sarabun',sans-serif">Sarabun</option>
+              <option value="'AngsanaUPC',serif">AngsanaUPC</option>
             </select>
           </div>
           <div class="ribbon-ctrl">
@@ -1102,7 +1106,7 @@ input[type=number]{text-align:right}
 
     <!-- Footer status bar -->
     <div class="modal-footer">
-      <span style="font-size:11px;color:#888;flex:1" id="pageInfo">A4 · THSarabunIT๙ 16pt</span>
+      <span style="font-size:11px;color:#888;flex:1" id="pageInfo">A4 · TH SarabunIT๙ 16pt</span>
       <button class="btn btn-secondary btn-sm" onclick="closeModal()">✕ ปิด</button>
     </div>
 
@@ -1299,21 +1303,21 @@ input[type=number]{text-align:right}
 
       <!-- Form 1 fields -->
       <div class="admin-card">
-        <div class="admin-section-title">📄 แบบที่ 1 รายงานขอซื้อ/จ้าง</div>
+        <div class="admin-section-title">📄 แบบที่ ๑ รายงานขอซื้อ/จ้าง</div>
         <div class="field-list" id="adm_fields_f1"></div>
         <button class="add-field-btn" onclick="addCustomField('f1')">+ เพิ่มช่องกรอกข้อมูล</button>
       </div>
 
       <!-- Form 2 fields -->
       <div class="admin-card">
-        <div class="admin-section-title">📄 แบบที่ 2 ขออนุมัติ</div>
+        <div class="admin-section-title">📄 แบบที่ ๒ ขออนุมัติ</div>
         <div class="field-list" id="adm_fields_f2"></div>
         <button class="add-field-btn" onclick="addCustomField('f2')">+ เพิ่มช่องกรอกข้อมูล</button>
       </div>
 
       <!-- Form 3 fields -->
       <div class="admin-card">
-        <div class="admin-section-title">📄 แบบที่ 3 ตรวจรับงาน</div>
+        <div class="admin-section-title">📄 แบบที่ ๓ ตรวจรับงาน</div>
         <div class="field-list" id="adm_fields_f3"></div>
         <button class="add-field-btn" onclick="addCustomField('f3')">+ เพิ่มช่องกรอกข้อมูล</button>
       </div>
@@ -1425,17 +1429,17 @@ input[type=number]{text-align:right}
           <input class="form-control" id="adm_default_signer" placeholder="ชื่อ-สกุล"></div>
         <div class="form-group"><label class="form-label">ตำแหน่งผู้ลงนาม</label>
           <input class="form-control" id="adm_default_signer_pos" placeholder="ตำแหน่ง"></div>
-        <div class="form-group"><label class="form-label">กรรมการ 1 (ค่าเริ่มต้น)</label>
+        <div class="form-group"><label class="form-label">กรรมการ ๑ (ค่าเริ่มต้น)</label>
           <input class="form-control" id="adm_default_com1" placeholder="ชื่อ-สกุล"></div>
-        <div class="form-group"><label class="form-label">ตำแหน่งกรรมการ 1</label>
+        <div class="form-group"><label class="form-label">ตำแหน่งกรรมการ ๑</label>
           <input class="form-control" id="adm_default_com1_pos" placeholder="ตำแหน่ง"></div>
-        <div class="form-group"><label class="form-label">กรรมการ 2 (ค่าเริ่มต้น)</label>
+        <div class="form-group"><label class="form-label">กรรมการ ๒ (ค่าเริ่มต้น)</label>
           <input class="form-control" id="adm_default_com2" placeholder="ชื่อ-สกุล"></div>
-        <div class="form-group"><label class="form-label">ตำแหน่งกรรมการ 2</label>
+        <div class="form-group"><label class="form-label">ตำแหน่งกรรมการ ๒</label>
           <input class="form-control" id="adm_default_com2_pos" placeholder="ตำแหน่ง"></div>
-        <div class="form-group"><label class="form-label">กรรมการ 3 (ค่าเริ่มต้น)</label>
+        <div class="form-group"><label class="form-label">กรรมการ ๓ (ค่าเริ่มต้น)</label>
           <input class="form-control" id="adm_default_com3" placeholder="ชื่อ-สกุล"></div>
-        <div class="form-group"><label class="form-label">ตำแหน่งกรรมการ 3</label>
+        <div class="form-group"><label class="form-label">ตำแหน่งกรรมการ ๓</label>
           <input class="form-control" id="adm_default_com3_pos" placeholder="ตำแหน่ง"></div>
         <div class="form-group"><label class="form-label">ผู้อนุมัติ (ค่าเริ่มต้น)</label>
           <input class="form-control" id="adm_default_approver" placeholder="ชื่อ-สกุล"></div>
@@ -2583,32 +2587,54 @@ function previewForm(formNum){
   var titles = {1:'รายงานขอซื้อ/ขอจ้าง',2:'ขออนุมัติจัดซื้อ/จัดจ้าง',3:'คณะกรรมการตรวจรับงาน'};
   var s       = getExportSettings();
   var content = getDocHTML(formNum);
-  var fullHtml = buildFullPreviewPage(titles[formNum], formNum, content, s);
-  // เก็บไว้ใน blob URL แล้ว open — ผ่าน popup blocker ได้ดีกว่า
-  var blob = new Blob([fullHtml], {type:'text/html;charset=utf-8'});
-  var url  = URL.createObjectURL(blob);
-  var win  = window.open(url,'_blank');
-  if(!win){
-    // fallback: เปิดใน modal แทน
-    var modal = document.getElementById('previewModal');
-    var body  = document.getElementById('previewBody');
-    var title = document.getElementById('previewTitle');
-    if(modal && body){
-      if(title) title.textContent = titles[formNum];
-      body.innerHTML =
-        '<iframe src="'+url+'" style="width:100%;height:80vh;border:none;background:#d0d0d0"></iframe>';
-      modal.classList.add('open');
-      document.getElementById('modalPrintBtn').onclick = function(){
-        var fr = body.querySelector('iframe');
-        if(fr && fr.contentWindow) fr.contentWindow.print();
-      };
-      document.getElementById('modalPdfBtn').onclick   = function(){exportPDF(formNum);};
-      document.getElementById('modalWordBtn').onclick  = function(){exportWord(formNum);};
-    } else {
-      showToast('⚠️ กรุณาอนุญาต popup ในบราวเซอร์');
-    }
+
+  // เปิดใน modal ภายในหน้าเดียวกัน (ไม่ต้องพึ่ง popup)
+  var modal = document.getElementById('previewModal');
+  var body  = document.getElementById('previewBody');
+  var title = document.getElementById('previewTitle');
+
+  if(modal && body){
+    if(title) title.textContent = titles[formNum];
+
+    // ล้างเนื้อหาเก่าและใส่ใหม่
+    body.innerHTML = '';
+
+    // สร้าง iframe ที่ srcdoc แทน blob URL — ผ่าน CSP ได้ดีกว่า
+    var iframe = document.createElement('iframe');
+    iframe.style.cssText = 'width:100%;height:100%;border:none;background:#c8c8c8;display:block;flex:1';
+    iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-modals allow-downloads');
+
+    var fullHtml = buildFullPreviewPage(titles[formNum], formNum, content, s);
+    iframe.srcdoc = fullHtml;
+
+    body.appendChild(iframe);
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    // ผูกปุ่มใน modal
+    var printBtn = document.getElementById('modalPrintBtn');
+    var pdfBtn   = document.getElementById('modalPdfBtn');
+    var wordBtn  = document.getElementById('modalWordBtn');
+
+    if(printBtn) printBtn.onclick = function(){
+      if(iframe.contentWindow) iframe.contentWindow.print();
+    };
+    if(pdfBtn)   pdfBtn.onclick   = function(){
+      if(iframe.contentWindow) iframe.contentWindow.print();
+    };
+    if(wordBtn)  wordBtn.onclick  = function(){
+      // trigger doWord inside iframe
+      if(iframe.contentWindow && iframe.contentWindow.doWord)
+        iframe.contentWindow.doWord();
+    };
+  } else {
+    // fallback สุดท้าย: เปิดหน้าต่างใหม่
+    var blob = new Blob([buildFullPreviewPage(titles[formNum], formNum, content, s)],
+                        {type:'text/html;charset=utf-8'});
+    var url  = URL.createObjectURL(blob);
+    window.open(url,'_blank');
+    setTimeout(function(){URL.revokeObjectURL(url);},60000);
   }
-  setTimeout(function(){URL.revokeObjectURL(url);}, 60000);
 }
 
 function buildFullPreviewPage(title, formNum, content, s){
@@ -3108,6 +3134,7 @@ document.addEventListener('change', function(e){
 });
 
 function closeModal(){
+  document.body.style.overflow = '';
   document.getElementById('previewModal').classList.remove('open');
   document.onkeydown=null;
 }
